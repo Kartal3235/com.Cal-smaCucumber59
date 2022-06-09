@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,7 +8,7 @@ import org.junit.Assert;
 import pages.HotelMycampPage;
 import utilities.Driver;
 
-public class HotelMyCampDefinitions {
+public class HotelMyCampstepDefinitions {
     HotelMycampPage htmy=new HotelMycampPage();
 
     @Given("kullanici hotelmycamp anasayfasina gider")
@@ -48,4 +49,18 @@ public class HotelMyCampDefinitions {
     }
 
 
+    @And("gecersiz username olarak {string} girer")
+    public void gecersizUsernameOlarakGirer(String istenenKelime) {
+        htmy.username.sendKeys(istenenKelime);
+    }
+
+    @And("gecersiz password olarak {string} girer")
+    public void gecersizPasswordOlarakGirer(String istenenpassword) {
+        htmy.password.sendKeys(istenenpassword);
+    }
+
+    @Then("sayfaya giris yapılamadığını test eder")
+    public void sayfayaGirisYapılamadığınıTestEder() {
+       Assert.assertTrue(htmy.tekrarDeneyinizText.isDisplayed());
+    }
 }

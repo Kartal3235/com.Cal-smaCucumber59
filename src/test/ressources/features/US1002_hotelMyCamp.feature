@@ -1,15 +1,5 @@
-Feature: MotelMyCamp giriş yapma
+Feature: US1002 MotelMyCamp giriş yapma
 
-
-  Hamza Ersoy13:51
-  https://www.hotelmycamp.com
-  adresine git
-  login butonuna bas
-  test data username:
-  manager
-  test data password :
-  Manager 1
-  Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
 
   Scenario: kullanicinin HotelMyCamp sayfasina giris yapmasi
     Given kullanici hotelmycamp anasayfasina gider

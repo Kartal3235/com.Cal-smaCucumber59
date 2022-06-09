@@ -19,4 +19,6 @@ public class HotelMycampPage {
     public WebElement ikinciLoginClick;
     @FindBy(xpath = "(//*[text()='ListOfUsers'])[2]")
     public WebElement sonucElementi;
+    @FindBy(xpath = "//*[@id=\"divMessageResult\"]/div/span")
+    public WebElement tekrarDeneyinizText;
 }
